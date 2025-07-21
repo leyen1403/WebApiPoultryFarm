@@ -1,0 +1,6 @@
+@WebApiPoultryFarm_HostAddress = http://localhost:5155
+
+GET {{WebApiPoultryFarm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
