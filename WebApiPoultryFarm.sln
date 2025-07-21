@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPoultryFarm", "WebApiPoultryFarm\WebApiPoultryFarm.csproj", "{643B0D88-AB81-4828-9B15-9488A3E17ED1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPoultryFarm.Api", "WebApiPoultryFarm\WebApiPoultryFarm.Api.csproj", "{643B0D88-AB81-4828-9B15-9488A3E17ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPoultryFarm.Application", "PoultryFarm.Application\WebApiPoultryFarm.Application.csproj", "{D3BBAF7F-B72E-4782-93FA-1874EEA24F3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPoultryFarm.Domain", "WebApiPoultryFarm.Domain\WebApiPoultryFarm.Domain.csproj", "{A6B5D906-BA23-4FDE-A1EE-BB19A694653C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPoultryFarm.Infrastructure", "WebApiPoultryFarm.Infrastructure\WebApiPoultryFarm.Infrastructure.csproj", "{C89601BC-5920-40AC-89AF-485B7DEB359A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPoultryFarm.Share", "WebApiPoultryFarm.Share\WebApiPoultryFarm.Share.csproj", "{9E952BE7-AEC1-476A-A8D5-C151B4712A13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{643B0D88-AB81-4828-9B15-9488A3E17ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{643B0D88-AB81-4828-9B15-9488A3E17ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{643B0D88-AB81-4828-9B15-9488A3E17ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3BBAF7F-B72E-4782-93FA-1874EEA24F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3BBAF7F-B72E-4782-93FA-1874EEA24F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3BBAF7F-B72E-4782-93FA-1874EEA24F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3BBAF7F-B72E-4782-93FA-1874EEA24F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6B5D906-BA23-4FDE-A1EE-BB19A694653C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B5D906-BA23-4FDE-A1EE-BB19A694653C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B5D906-BA23-4FDE-A1EE-BB19A694653C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B5D906-BA23-4FDE-A1EE-BB19A694653C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C89601BC-5920-40AC-89AF-485B7DEB359A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C89601BC-5920-40AC-89AF-485B7DEB359A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C89601BC-5920-40AC-89AF-485B7DEB359A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C89601BC-5920-40AC-89AF-485B7DEB359A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E952BE7-AEC1-476A-A8D5-C151B4712A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E952BE7-AEC1-476A-A8D5-C151B4712A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E952BE7-AEC1-476A-A8D5-C151B4712A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E952BE7-AEC1-476A-A8D5-C151B4712A13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
