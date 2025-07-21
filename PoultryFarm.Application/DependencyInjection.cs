@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using WebApiPoultryFarm.Application.Users.CreateUser;
 
 namespace WebApiPoultryFarm.Application
 {
@@ -6,8 +7,7 @@ namespace WebApiPoultryFarm.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            //services.AddScoped<ChickenService>();
-            // Đăng ký các service, handler, validator... tại đây
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommandHandler).Assembly));
 
             return services;
         }
