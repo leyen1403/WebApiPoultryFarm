@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiPoultryFarm.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using WebApiPoultryFarm.Infrastructure.Data;
 namespace WebApiPoultryFarm.Infrastructure.Migrations
 {
     [DbContext(typeof(PoultryFarmDbContext))]
-    partial class PoultryFarmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250721103012_init-db1")]
+    partial class initdb1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

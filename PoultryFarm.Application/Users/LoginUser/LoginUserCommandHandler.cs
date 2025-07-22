@@ -28,7 +28,10 @@ namespace WebApiPoultryFarm.Application.Users.LoginUser
                 Id = user.Id,
                 UserName = user.UserName,
                 FullName = user.FullName,
-                Email = user.Email
+                Email = user.Email,
+                AccessToken = "",
+                RefreshToken = "",
+                LastLoginAt = DateTime.UtcNow,
             });
         }
     }
