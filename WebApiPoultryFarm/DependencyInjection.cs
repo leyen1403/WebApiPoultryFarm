@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using WebApiPoultryFarm.Api.Filters;
 using WebApiPoultryFarm.Api.Models;
 using WebApiPoultryFarm.Application;
 using WebApiPoultryFarm.Infrastructure;
@@ -30,6 +31,12 @@ namespace WebApiPoultryFarm.Api
 
                     return new BadRequestObjectResult(response);
                 };
+            });
+
+            // Thêm filter bắt BusinessException toàn cục
+            services.AddControllers(opt =>
+            {
+                opt.Filters.Add<BusinessExceptionFilter>();
             });
             return services;
         }

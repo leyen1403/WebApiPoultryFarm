@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PoultryFarm.Application\WebApiPoultryFarm.Application.csproj" />
     <ProjectReference Include="..\WebApiPoultryFarm.Domain\WebApiPoultryFarm.Domain.csproj" />
+    <ProjectReference Include="..\WebApiPoultryFarm.Infrastructure\WebApiPoultryFarm.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

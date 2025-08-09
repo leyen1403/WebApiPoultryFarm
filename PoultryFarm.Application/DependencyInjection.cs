@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using WebApiPoultryFarm.Application.Users.CreateUser;
+using System.Reflection;
 
 namespace WebApiPoultryFarm.Application
 {
@@ -7,8 +7,10 @@ namespace WebApiPoultryFarm.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommandHandler).Assembly));
-
+            services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());               
+            });
             return services;
         }
     }

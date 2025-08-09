@@ -8,21 +8,28 @@ namespace WebApiPoultryFarm.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly PoultryFarmDbContext _context;
+        private readonly PoultryFarmDbContext _db;
+        public UserRepository(PoultryFarmDbContext db) => _db = db;
 
-        public UserRepository(PoultryFarmDbContext context)
+        public async Task<User?> GetByUserNameAsync(string userName, CancellationToken ct)
+            => await _db.Users.FirstOrDefaultAsync(u => u.UserName == userName, ct);
+
+        public async Task<User?> GetByRefreshTokenAsync(string refreshToken, CancellationToken ct)
+            => await _db.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken, ct);
+
+        public async Task AddAsync(User user, CancellationToken ct)
         {
-            _context = context ?? throw new ArgumentNullException(nameof(context));
+            await _db.Users.AddAsync(user, ct);
+            await _db.SaveChangesAsync(ct);
         }
 
-        public async Task AddAsync(User user)
+        public async Task UpdateAsync(User user, CancellationToken ct)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            _db.Users.Update(user);
+            await _db.SaveChangesAsync(ct);
         }
 
-        public async Task<User?> GetByEmailAsync(string email) => await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-
-        public async Task<User?> GetByUserNameAsync(string userName) => await _context.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+        public async Task<User?> GetByEmailAsync(string email, CancellationToken ct)
+            => await _db.Users.FirstOrDefaultAsync(u => u.Email == email, ct);
     }
 }

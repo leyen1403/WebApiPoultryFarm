@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApiPoultryFarm.Domain\WebApiPoultryFarm.Domain.csproj" />
-    <ProjectReference Include="..\WebApiPoultryFarm.Infrastructure\WebApiPoultryFarm.Infrastructure.csproj" />
     <ProjectReference Include="..\WebApiPoultryFarm.Share\WebApiPoultryFarm.Share.csproj" />
   </ItemGroup>
 

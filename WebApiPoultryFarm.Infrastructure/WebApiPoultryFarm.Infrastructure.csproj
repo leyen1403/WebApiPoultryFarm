@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -22,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PoultryFarm.Application\WebApiPoultryFarm.Application.csproj" />
     <ProjectReference Include="..\WebApiPoultryFarm.Domain\WebApiPoultryFarm.Domain.csproj" />
     <ProjectReference Include="..\WebApiPoultryFarm.Share\WebApiPoultryFarm.Share.csproj" />
   </ItemGroup>
